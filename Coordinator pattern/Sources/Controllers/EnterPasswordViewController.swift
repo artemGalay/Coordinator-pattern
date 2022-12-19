@@ -7,7 +7,9 @@
 
 import UIKit
 
-class EnterPasswordViewController: UIViewController {
+class EnterPasswordViewController: UIViewController, FlowController {
+
+    var completionHandler: ((String?) -> ())?
     
     private var userData: UserData?
     
@@ -46,13 +48,15 @@ class EnterPasswordViewController: UIViewController {
     }
     
     @objc private func didPressNextButton() {
+
+        completionHandler?(textField.text)
         
-        userData?.password = textField.text
-        
-        let enterNamePhoneViewController = EnterNameViewController()
-        
-        enterNamePhoneViewController.setup(userData: userData ?? UserData())
-        navigationController?.pushViewController(enterNamePhoneViewController, animated: true)
+//        userData?.password = textField.text
+//
+//        let enterNamePhoneViewController = EnterNameViewController()
+//
+//        enterNamePhoneViewController.setup(userData: userData ?? UserData())
+//        navigationController?.pushViewController(enterNamePhoneViewController, animated: true)
     }
     
     func setup(userData: UserData) {

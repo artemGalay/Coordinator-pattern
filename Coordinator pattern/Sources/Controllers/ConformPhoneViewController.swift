@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ConformPhoneViewController: UIViewController {
+class ConformPhoneViewController: UIViewController, FlowController {
+
+    var completionHandler: ((Bool) -> ())?
 
     private var userData: UserData?
 
@@ -47,10 +49,12 @@ class ConformPhoneViewController: UIViewController {
 
     @objc private func didPressNextButton() {
 
-        let enterPasswordViewController = EnterPasswordViewController()
+        completionHandler?(true)
 
-        enterPasswordViewController.setup(userData: userData ?? UserData())
-        navigationController?.pushViewController(enterPasswordViewController, animated: true)
+//        let enterPasswordViewController = EnterPasswordViewController()
+//
+//        enterPasswordViewController.setup(userData: userData ?? UserData())
+//        navigationController?.pushViewController(enterPasswordViewController, animated: true)
     }
     
     func setup(userData: UserData) {

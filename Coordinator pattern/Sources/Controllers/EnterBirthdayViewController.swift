@@ -7,7 +7,9 @@
 
 import UIKit
 
-class EnterBirthdayViewController: UIViewController {
+class EnterBirthdayViewController: UIViewController, FlowController {
+
+    var completionHandler: ((Date) -> ())?
 
     private var userData: UserData?
 
@@ -47,9 +49,11 @@ class EnterBirthdayViewController: UIViewController {
 
     @objc private func didPressNextButton() {
 
-        userData?.birthday = textField.text
+        completionHandler?(Date())
 
-        print("\(userData ?? UserData())")
+//        userData?.birthday = textField.text
+//
+//        print("\(userData ?? UserData())")
     }
 
     func setup(userData: UserData) {

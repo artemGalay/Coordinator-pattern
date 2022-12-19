@@ -7,7 +7,9 @@
 
 import UIKit
 
-class EnterPhoneViewController: UIViewController {
+class EnterPhoneViewController: UIViewController, FlowController {
+
+    var completionHandler: ((String?) -> ())?
 
     private lazy var textField: UITextField = {
         let textField = UITextField()
@@ -45,11 +47,13 @@ class EnterPhoneViewController: UIViewController {
 
     @objc private func didPressNextButton() {
 
-        let userData = UserData(phoneNumber: textField.text, password: nil, name: nil, birthday: nil)
+        completionHandler?(textField.text)
 
-        let conformPhoneViewController = ConformPhoneViewController()
-
-        conformPhoneViewController.setup(userData: userData)
-        navigationController?.pushViewController(conformPhoneViewController, animated: true)
+//        let userData = UserData(phoneNumber: textField.text, password: nil, name: nil, birthday: nil)
+//
+//        let conformPhoneViewController = ConformPhoneViewController()
+//
+//        conformPhoneViewController.setup(userData: userData)
+//        navigationController?.pushViewController(conformPhoneViewController, animated: true)
     }
 }

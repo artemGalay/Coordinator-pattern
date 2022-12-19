@@ -16,6 +16,12 @@
 		D9F5E13D2950CABE004455AD /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E13C2950CABE004455AD /* EnterPasswordViewController.swift */; };
 		D9F5E13F2950CAD5004455AD /* EnterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E13E2950CAD5004455AD /* EnterNameViewController.swift */; };
 		D9F5E1412950CAE7004455AD /* EnterBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E1402950CAE7004455AD /* EnterBirthdayViewController.swift */; };
+		D9F5E1442950CDFB004455AD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E1432950CDFB004455AD /* Coordinator.swift */; };
+		D9F5E1472950CF38004455AD /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E1462950CF38004455AD /* RegistrationCoordinator.swift */; };
+		D9F5E14A2950CFFF004455AD /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E1492950CFFF004455AD /* ModuleFactory.swift */; };
+		D9F5E14C2950D0B9004455AD /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E14B2950D0B8004455AD /* FlowController.swift */; };
+		D9F5E14F2950D648004455AD /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E14E2950D648004455AD /* CoordinatorFactory.swift */; };
+		D9F5E1512950D874004455AD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E1502950D874004455AD /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		D9F5E13C2950CABE004455AD /* EnterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordViewController.swift; sourceTree = "<group>"; };
 		D9F5E13E2950CAD5004455AD /* EnterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameViewController.swift; sourceTree = "<group>"; };
 		D9F5E1402950CAE7004455AD /* EnterBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterBirthdayViewController.swift; sourceTree = "<group>"; };
+		D9F5E1432950CDFB004455AD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D9F5E1462950CF38004455AD /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
+		D9F5E1492950CFFF004455AD /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		D9F5E14B2950D0B8004455AD /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		D9F5E14E2950D648004455AD /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		D9F5E1502950D874004455AD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,9 @@
 		D9F5E11E2950C0A8004455AD /* Coordinator pattern */ = {
 			isa = PBXGroup;
 			children = (
+				D9F5E1482950CFD9004455AD /* Factories */,
+				D9F5E1452950CF16004455AD /* Coordinators */,
+				D9F5E1422950CDEC004455AD /* Base */,
 				D9F5E1372950C6C0004455AD /* Model */,
 				D9F5E1332950C61E004455AD /* App */,
 				D9F5E1362950C64E004455AD /* Sources */,
@@ -114,6 +129,33 @@
 				D9F5E1382950C6DF004455AD /* UserData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D9F5E1422950CDEC004455AD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D9F5E1432950CDFB004455AD /* Coordinator.swift */,
+				D9F5E14B2950D0B8004455AD /* FlowController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D9F5E1452950CF16004455AD /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D9F5E1462950CF38004455AD /* RegistrationCoordinator.swift */,
+				D9F5E1502950D874004455AD /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D9F5E1482950CFD9004455AD /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				D9F5E1492950CFFF004455AD /* ModuleFactory.swift */,
+				D9F5E14E2950D648004455AD /* CoordinatorFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +228,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F5E1442950CDFB004455AD /* Coordinator.swift in Sources */,
 				D9F5E13F2950CAD5004455AD /* EnterNameViewController.swift in Sources */,
+				D9F5E1512950D874004455AD /* AppCoordinator.swift in Sources */,
+				D9F5E14A2950CFFF004455AD /* ModuleFactory.swift in Sources */,
+				D9F5E14F2950D648004455AD /* CoordinatorFactory.swift in Sources */,
+				D9F5E14C2950D0B9004455AD /* FlowController.swift in Sources */,
+				D9F5E1472950CF38004455AD /* RegistrationCoordinator.swift in Sources */,
 				D9F5E13B2950C7EF004455AD /* ConformPhoneViewController.swift in Sources */,
 				D9F5E1392950C6DF004455AD /* UserData.swift in Sources */,
 				D9F5E1242950C0A8004455AD /* EnterPhoneViewController.swift in Sources */,
