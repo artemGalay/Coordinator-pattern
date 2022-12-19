@@ -44,6 +44,10 @@ class EnterPhoneViewController: UIViewController {
     }
 
     @objc private func didPressNextButton() {
+        let userData = UserData(phoneNumber: textField.text, password: nil, name: nil, birthday: nil)
+
+        let conformPhoneViewController = ConformPhoneViewController()
+        
         
 
     }
