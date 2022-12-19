@@ -12,6 +12,10 @@
 		D9F5E1292950C0A9004455AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F5E1282950C0A9004455AD /* Assets.xcassets */; };
 		D9F5E12C2950C0A9004455AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F5E12A2950C0A9004455AD /* LaunchScreen.storyboard */; };
 		D9F5E1392950C6DF004455AD /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E1382950C6DF004455AD /* UserData.swift */; };
+		D9F5E13B2950C7EF004455AD /* ConformPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E13A2950C7EF004455AD /* ConformPhoneViewController.swift */; };
+		D9F5E13D2950CABE004455AD /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E13C2950CABE004455AD /* EnterPasswordViewController.swift */; };
+		D9F5E13F2950CAD5004455AD /* EnterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E13E2950CAD5004455AD /* EnterNameViewController.swift */; };
+		D9F5E1412950CAE7004455AD /* EnterBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E1402950CAE7004455AD /* EnterBirthdayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		D9F5E12B2950C0A9004455AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9F5E12D2950C0A9004455AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9F5E1382950C6DF004455AD /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		D9F5E13A2950C7EF004455AD /* ConformPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformPhoneViewController.swift; sourceTree = "<group>"; };
+		D9F5E13C2950CABE004455AD /* EnterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordViewController.swift; sourceTree = "<group>"; };
+		D9F5E13E2950CAD5004455AD /* EnterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameViewController.swift; sourceTree = "<group>"; };
+		D9F5E1402950CAE7004455AD /* EnterBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterBirthdayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,10 @@
 			isa = PBXGroup;
 			children = (
 				D9F5E1232950C0A8004455AD /* EnterPhoneViewController.swift */,
+				D9F5E13A2950C7EF004455AD /* ConformPhoneViewController.swift */,
+				D9F5E13C2950CABE004455AD /* EnterPasswordViewController.swift */,
+				D9F5E13E2950CAD5004455AD /* EnterNameViewController.swift */,
+				D9F5E1402950CAE7004455AD /* EnterBirthdayViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,8 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F5E13F2950CAD5004455AD /* EnterNameViewController.swift in Sources */,
+				D9F5E13B2950C7EF004455AD /* ConformPhoneViewController.swift in Sources */,
 				D9F5E1392950C6DF004455AD /* UserData.swift in Sources */,
 				D9F5E1242950C0A8004455AD /* EnterPhoneViewController.swift in Sources */,
+				D9F5E1412950CAE7004455AD /* EnterBirthdayViewController.swift in Sources */,
+				D9F5E13D2950CABE004455AD /* EnterPasswordViewController.swift in Sources */,
 				D9F5E1202950C0A8004455AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 76N9URDUCT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Coordinator pattern/Info.plist";
+				INFOPLIST_FILE = "Coordinator pattern/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -345,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 76N9URDUCT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Coordinator pattern/Info.plist";
+				INFOPLIST_FILE = "Coordinator pattern/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
