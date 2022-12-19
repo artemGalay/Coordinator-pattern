@@ -7,7 +7,9 @@
 
 import UIKit
 
-class EnterNameViewController: UIViewController {
+class EnterNameViewController: UIViewController, FlowController {
+
+    var completionHandler: ((String?) -> ())?
 
     private var userData: UserData?
 
@@ -47,12 +49,14 @@ class EnterNameViewController: UIViewController {
 
     @objc private func didPressNextButton() {
 
-        userData?.name = textField.text
+        completionHandler?(textField.text)
 
-        let enterBirthdayViewController = EnterBirthdayViewController()
-
-        enterBirthdayViewController.setup(userData: userData ?? UserData())
-        navigationController?.pushViewController(enterBirthdayViewController, animated: true)
+//        userData?.name = textField.text
+//
+//        let enterBirthdayViewController = EnterBirthdayViewController()
+//
+//        enterBirthdayViewController.setup(userData: userData ?? UserData())
+//        navigationController?.pushViewController(enterBirthdayViewController, animated: true)
     }
 
     func setup(userData: UserData) {
