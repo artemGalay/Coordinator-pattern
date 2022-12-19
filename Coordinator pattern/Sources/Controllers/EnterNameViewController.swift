@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  EnterNameViewController.swift
 //  Coordinator pattern
 //
 //  Created by Артем Галай on 19.12.22.
@@ -7,12 +7,14 @@
 
 import UIKit
 
-class EnterPhoneViewController: UIViewController {
+class EnterNameViewController: UIViewController {
+
+    private var userData: UserData?
 
     private lazy var textField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
-        textField.placeholder = "Enter phone"
+        textField.placeholder = "Enter name"
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -31,7 +33,7 @@ class EnterPhoneViewController: UIViewController {
     }
 
     private func setupHierarcy() {
-        title = "EnterPhone"
+        title = "EnterName"
         view.backgroundColor = .white
 
         let stackView = UIStackView(arrangedSubviews: [textField, nextButton])
@@ -45,11 +47,15 @@ class EnterPhoneViewController: UIViewController {
 
     @objc private func didPressNextButton() {
 
-        let userData = UserData(phoneNumber: textField.text, password: nil, name: nil, birthday: nil)
+        userData?.name = textField.text
 
-        let conformPhoneViewController = ConformPhoneViewController()
+        let enterBirthdayViewController = EnterBirthdayViewController()
 
-        conformPhoneViewController.setup(userData: userData)
-        navigationController?.pushViewController(conformPhoneViewController, animated: true)
+        enterBirthdayViewController.setup(userData: userData ?? UserData())
+        navigationController?.pushViewController(enterBirthdayViewController, animated: true)
     }
+
+    func setup(userData: UserData) {
+    self.userData = userData
+}
 }

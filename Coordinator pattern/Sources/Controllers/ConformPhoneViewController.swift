@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ConformPhoneViewController.swift
 //  Coordinator pattern
 //
 //  Created by Артем Галай on 19.12.22.
@@ -7,12 +7,14 @@
 
 import UIKit
 
-class EnterPhoneViewController: UIViewController {
+class ConformPhoneViewController: UIViewController {
+
+    private var userData: UserData?
 
     private lazy var textField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
-        textField.placeholder = "Enter phone"
+        textField.placeholder = "Enter code"
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -31,7 +33,7 @@ class EnterPhoneViewController: UIViewController {
     }
 
     private func setupHierarcy() {
-        title = "EnterPhone"
+        title = "ConformPhone"
         view.backgroundColor = .white
 
         let stackView = UIStackView(arrangedSubviews: [textField, nextButton])
@@ -45,11 +47,13 @@ class EnterPhoneViewController: UIViewController {
 
     @objc private func didPressNextButton() {
 
-        let userData = UserData(phoneNumber: textField.text, password: nil, name: nil, birthday: nil)
+        let enterPasswordViewController = EnterPasswordViewController()
 
-        let conformPhoneViewController = ConformPhoneViewController()
-
-        conformPhoneViewController.setup(userData: userData)
-        navigationController?.pushViewController(conformPhoneViewController, animated: true)
+        enterPasswordViewController.setup(userData: userData ?? UserData())
+        navigationController?.pushViewController(enterPasswordViewController, animated: true)
+    }
+    
+    func setup(userData: UserData) {
+        self.userData = userData
     }
 }
