@@ -11,6 +11,7 @@
 		D9F5E1242950C0A8004455AD /* EnterPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E1232950C0A8004455AD /* EnterPhoneViewController.swift */; };
 		D9F5E1292950C0A9004455AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F5E1282950C0A9004455AD /* Assets.xcassets */; };
 		D9F5E12C2950C0A9004455AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F5E12A2950C0A9004455AD /* LaunchScreen.storyboard */; };
+		D9F5E1392950C6DF004455AD /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5E1382950C6DF004455AD /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		D9F5E1282950C0A9004455AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9F5E12B2950C0A9004455AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9F5E12D2950C0A9004455AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9F5E1382950C6DF004455AD /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,8 @@
 		D9F5E11E2950C0A8004455AD /* Coordinator pattern */ = {
 			isa = PBXGroup;
 			children = (
+				D9F5E1372950C6C0004455AD /* Model */,
+				D9F5E1332950C61E004455AD /* App */,
 				D9F5E1362950C64E004455AD /* Sources */,
 				D9F5E1352950C62D004455AD /* Resources */,
 			);
@@ -87,10 +91,17 @@
 		D9F5E1362950C64E004455AD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D9F5E1332950C61E004455AD /* App */,
 				D9F5E1342950C623004455AD /* Controllers */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		D9F5E1372950C6C0004455AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9F5E1382950C6DF004455AD /* UserData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F5E1392950C6DF004455AD /* UserData.swift in Sources */,
 				D9F5E1242950C0A8004455AD /* EnterPhoneViewController.swift in Sources */,
 				D9F5E1202950C0A8004455AD /* AppDelegate.swift in Sources */,
 			);
