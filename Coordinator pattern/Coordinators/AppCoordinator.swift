@@ -36,16 +36,11 @@ class AppCoordinator: Coordinator {
 
         registrationCoordinator.flowCompletionHandler = { [weak self] in
             self?.showMainFlow()
-
         }
 
         registrationCoordinator.start()
-
     }
 
     private func showMainFlow() {
-
     }
-
-    
 }
